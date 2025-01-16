@@ -5,8 +5,10 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
+import java.util.Calendar;
 
 @Entity
 @Table(name = "Producto")
@@ -33,5 +35,13 @@ public class Product implements Serializable {
 
     @Column(name = "categoria")
     private String category;
+
+    @Column(name = "fecha_creacion")
+    @DateTimeFormat(pattern = "yyyy-mm-dd")
+    private Calendar creationDate;
+
+    @Column(name = "fecha_actualizacion")
+    @DateTimeFormat(pattern = "yyyy-mm-dd")
+    private Calendar updateDate;
 
 }

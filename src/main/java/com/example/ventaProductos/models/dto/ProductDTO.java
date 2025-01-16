@@ -3,6 +3,7 @@ package com.example.ventaProductos.models.dto;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.Calendar;
 
 @NoArgsConstructor
 @Getter
@@ -19,5 +20,7 @@ public class ProductDTO implements Serializable {
     private Double cost;
     private Integer quantity;
     private String category;
+    private Calendar creationDate;
+    private Calendar updateDate;
 
 }
